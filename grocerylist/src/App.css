@@ -1,0 +1,21 @@
+
+ul {
+  list-style-type: none;
+}
+
+.checkbutton {
+  height: 25px;
+  width: 30px;
+}
+
+.checkbutton:hover {
+  opacity: 50%;
+}
+
+.striped {
+  text-decoration: line-through;
+}
+
+.inputfield:focus {
+  border: 2px darkgray;
+}
