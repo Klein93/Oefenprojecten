@@ -1,1 +1,51 @@
-#map { height: 180px;}
+#map { height: 300px;}
+
+#patternDiv {
+background-image: url('images/pattern-bg.png');
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#inputfield {
+  padding-left: 5%;  
+ 
+}
+#searchbutton {
+    height: 50px;
+    width: 50px;
+    
+    background-color: black;
+
+    background-repeat: no-repeat;
+    border-radius: 0% 25% 25% 0%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   margin-top: 38%;
+  
+}
+
+#searchbutton:hover {
+    opacity: 0.8;
+}
+
+#searchfield {
+    display: flex;
+}
+
+#heading {
+    color: white;
+}
+
+#dataheading {
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+

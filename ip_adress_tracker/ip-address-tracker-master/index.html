@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
@@ -19,31 +19,38 @@
   <script defer type="text/javascript" src="api-client.js"></script>
   <script defer type="text/javascript" src="script.js"></script>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
 </head>
 
 <body>
+  <div id="patternDiv">
+    <h2 id="heading">IP Address Tracker</h2>
 
-  <h1>IP Address Tracker</h1>
-
-  <div>
-    <input id="inputfield" type="input" placeholder="Search for any IP address or domain" size="40"></input>
-    <button id="searchbutton" type="button"></button>
+    <div id="searchfield">
+      <input id="inputfield" type="input" placeholder="Search for any IP address or domain" size="40"></input>
+      <div id="searchbutton"><img src="images/icon-arrow.svg"></div>
+    </div>
   </div>
   <div id="dataheading">
-
+    <div>
+      <h5>ip adress</h5>
+      <p id="ipadress"></p>
+    </div>
+    <div>
+      <h5>location</h5>
+      <p id="location"></p>
+    </div>
+    <div>
+      <h5>timezone</h5>
+      <p id="timezone"></p>
+    </div>
+    <div>
+      <h5>isp</h5>
+      <p id="isp"></p>
+    </div>
   </div>
 
   <div id="map"></div>
-
-  <!-- 
-  IP Address
-  Location
-  Timezone
-  UTC
- add offset value dynamically using the API
-  ISP -->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
