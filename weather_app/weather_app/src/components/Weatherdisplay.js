@@ -24,7 +24,7 @@ class Weatherdisplay extends React.Component {
 
     componentDidMount() {
 
-        fetch("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&units=metric&appid=5c2a75f8a8321d1125734abeb8c3af37")
+        fetch("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&units=metric")
 
             .then(response => response.json())
             .then(res => this.setState({
