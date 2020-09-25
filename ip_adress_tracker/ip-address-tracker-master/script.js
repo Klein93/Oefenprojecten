@@ -24,13 +24,13 @@ const showLocOnMap = async function (IPadress) {
     let lng = locData.location.lng;
     mymap.setView([lat, lng], 13);
     L.marker([lat, lng]).addTo(mymap);
-    showData(locData.ip, locData.location.region, locData.location.timezone, locData.isp)
+    showData(locData.ip, locData.location.region, locData.location.city, locData.location.timezone, locData.isp)
 
 };
 
-const showData = function (ipadress, location, timezone, isp) {
+const showData = function (ipadress, region, city, timezone, isp) {
     ipadressP.innerHTML = ipadress;
-    locationP.innerHTML = location;
+    locationP.innerHTML = `${region}, ${city}`;
     timezoneP.innerHTML = timezone;
     ispP.innerHTML = isp;
 
