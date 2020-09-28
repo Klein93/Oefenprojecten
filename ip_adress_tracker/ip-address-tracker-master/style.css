@@ -11,13 +11,12 @@ position: relative;
 
 }
 
+
 #inputfield {
   padding-left: 5%;  
   border-radius: 10px 0% 0% 10px;
  
 }
-
-
 
 #searchbutton {
     height: 50px;
@@ -57,8 +56,9 @@ img {
     z-index: 1;
     position: absolute;
     width: 80%;
-    top: 29%;
-    left: 10%;
+    top: 175px;
+    left: 100px; 
+   
     border-radius: 1em / 1em;
     
 }
@@ -71,11 +71,45 @@ img {
 .loctext{
     color: black;
     font-size: 150%;
+    font-weight: bold;
     font-family: Verdana, Tahoma, sans-serif;
     
 }
 
 .subtitle {
     color: grey;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    #dataheading {
+        display: flex;
+        flex-direction: column;
+       background-color:whitesmoke;
+       align-items: center;
+        z-index: 1;
+        position: absolute;
+        width: 80%;
+        top: 175px;
+        left: 50px; 
+        border-radius: 1em / 1em;
+    }
+
+    .loctext{
+        color: black;
+        font-size: 90%;
+        font-weight: bold;
+        font-family: Verdana, Tahoma, sans-serif;
+        text-align: center;
+        
+    }
+
+    .subtitle {
+        color: grey;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50%;
+        text-align: center;
+    }
 }
