@@ -1,4 +1,7 @@
-.weatherHeadline {
-    /* display: flex;
-    flex-direction: column; */
+.column {
+    background-color: blue;
+}
+
+.app {
+    color: whitesmoke;
 }

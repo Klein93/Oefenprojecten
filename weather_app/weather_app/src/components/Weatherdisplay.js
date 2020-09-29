@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 
 class Weatherdisplay extends React.Component {
     constructor() {
@@ -11,6 +11,12 @@ class Weatherdisplay extends React.Component {
 
         };
         this.convertTimestamp = this.convertTimestamp.bind(this)
+        this.adaptBackground = this.adaptBackground.bind(this)
+    }
+
+    adaptBackground = (time) => {
+        let timestamp = time;
+        console.log(timestamp)
     }
 
     convertTimestamp = (timestamp) => {
@@ -40,28 +46,39 @@ class Weatherdisplay extends React.Component {
                 windspeed: res.wind.speed
             }))
 
+
     };
     render() {
         return (
-            <Container>
+            <Container className="app">
                 <Row>
-                    <Col className="column" xs={12}>
-                        <h1>{this.state.country}</h1>
-                        <h1>{this.state.time}</h1>
+                    <Col className="column" xs={12} lg={4}>
+                        <h3>{this.state.country}</h3>
+                        <h3>{this.state.time}</h3>
                     </Col>
                 </Row>
+                <Row>
+                    <Col className="column" xs={6} lg={2}>
+                        <h1>{this.state.weather}</h1>
+                    </Col>
+                    <Col className="column" xs={6} lg={2}>
+                        <img alt="" src={`http://openweathermap.org/img/w/${this.state.weathericonID}.png`}></img>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="column" xs={12} lg={4}>
+                        <h3 className="weatherDescription">{this.state.weatherdescription}</h3>
+                        <ListGroup >
+                            <ListGroupItem variant="primary">temperature: {this.state.temperature + "\xB0C"}</ListGroupItem>
+                            <ListGroupItem variant="primary">feels like: {this.state.feelsLike + "\xB0C"}</ListGroupItem>
+                            <ListGroupItem variant="primary">min temp: {this.state.minTemp + "\xB0C"}</ListGroupItem>
+                            <ListGroupItem variant="primary">min temp: {this.state.minTemp + "\xB0C"}</ListGroupItem>
+                            <ListGroupItem variant="primary">max temp: {this.state.maxTemp + "\xB0C"}</ListGroupItem>
+                            <ListGroupItem variant="primary">windspeed: {this.state.windspeed} meter/sec</ListGroupItem>
+                        </ListGroup>
 
-                <div className="weatherHeadline">
-                    <h1>{this.state.weather}</h1>
-                    <img alt="" src={`http://openweathermap.org/img/w/${this.state.weathericonID}.png`}></img>
-                </div>
-                <h2 className="weatherDescription">{this.state.weatherdescription}</h2>
-                <p>temperature: {this.state.temperature + "\xB0C"}</p>
-                <p>feels like: {this.state.feelsLike + "\xB0C"}</p>
-                <p>min temp: {this.state.minTemp + "\xB0C"}</p>
-                <p>max temp: {this.state.maxTemp + "\xB0C"}</p>
-                <p>windspeed: {this.state.windspeed} meter/sec</p>
-
+                    </Col>
+                </Row>
             </Container >
         )
     }
