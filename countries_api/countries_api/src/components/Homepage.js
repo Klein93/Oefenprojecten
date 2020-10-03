@@ -2,15 +2,14 @@ import React from "react"
 import Heading from "./Heading"
 import Inputfield from "./Inputfield"
 import CountryDisplays from "./CountryDisplays"
-
-
-
+import Filtermenu from "./Filtermenu"
 
 class Homepage extends React.Component {
     constructor(props) {
         super()
         this.state = {
-            data: []
+            data: [],
+            selectedCountries: []
         }
         this.getAllCountryData = this.getAllCountryData.bind(this);
         this.searchCountryByName = this.searchCountryByName.bind(this);
@@ -30,22 +29,29 @@ class Homepage extends React.Component {
 
     }
 
-    filterCountriesByRegion = async function (input) {
-        let allData = await this.getAllCountryData();
-        let filteredByRegion = allData.filter(country =>
-            country.region === input
+    filterCountriesByRegion = function (event) {
+
+        let filteredByRegion = this.state.data.filter(country =>
+            country.region === event.target.value
         )
         this.setState({
-            data: filteredByRegion
+            selectedCountries: filteredByRegion
         })
     }
 
     componentDidMount = async function () {
         let allData = await this.getAllCountryData()
-        this.setState({
-            data: allData
-        })
+        let i;
+        for (i = 0; i < allData.length; i++) {
+            allData[i].id = i + 1
 
+        }
+
+        this.setState({
+            data: allData,
+            selectedCountries: allData
+        })
+        // console.log(allData)
     }
 
     searchCountryByName = async function (inputname) {
@@ -67,7 +73,8 @@ class Homepage extends React.Component {
             <div>
                 <Heading moonimg={this.props.moonimg} />
                 <Inputfield searchCountryByName={this.searchCountryByName} />
-                <CountryDisplays countries={this.state.data} />
+                <Filtermenu countries={this.state.data} filterRegions={this.filterCountriesByRegion} />
+                <CountryDisplays countries={this.state.selectedCountries} />
                 {/* <h3>country info ul</h3> */}
             </div>
         )
