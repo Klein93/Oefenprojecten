@@ -23,10 +23,10 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div style={{ position: "relative" }}>
-      <img src={introLeft} className="introImgLeft" style={{ position: "absolute" }}></img>
-      <img src={familyImage} className="familyImg" style={{ position: "absolute" }}></img>
+      <img alt="" src={introLeft} className="introImgLeft" style={{ position: "absolute" }}></img>
+      <img alt="" src={familyImage} className="familyImg" style={{ position: "absolute" }}></img>
       <Navigation />
-      <img src={introRight} className="introImgRight" style={{ position: "absolute", marginLeft: "65%" }}></img>
+      <img alt="" src={introRight} className="introImgRight" style={{ position: "absolute", marginLeft: "65%" }}></img>
       <FirstJumbotron />
       <SecondJumbotron snappyProcessImage={snappyProcessImage} affordablePricesImage={affordablePricesImage} peopleFirstImage={peopleFirstImage} cardBackground={cardBackground} />
       <Footer footerImg={footerImg} pinterestIcon={pinterestIcon} twitterIcon={twitterIcon} instagramIcon={instagramIcon} facebookIcon={facebookIcon} />

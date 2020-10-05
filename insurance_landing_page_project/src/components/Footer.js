@@ -12,10 +12,10 @@ function Footer(props) {
                     <Col lg={6}></Col>
                     <Col lg={3}>
                         <Row>
-                            <Col><img src={props.facebookIcon}></img></Col>
-                            <Col><img src={props.twitterIcon}></img></Col>
-                            <Col><img src={props.pinterestIcon}></img></Col>
-                            <Col><img src={props.instagramIcon}></img></Col>
+                            <Col><img alt="" src={props.facebookIcon}></img></Col>
+                            <Col><img alt="" src={props.twitterIcon}></img></Col>
+                            <Col><img alt="" src={props.pinterestIcon}></img></Col>
+                            <Col><img alt="" src={props.instagramIcon}></img></Col>
                         </Row>
                     </Col>
                 </Row>
@@ -25,10 +25,10 @@ function Footer(props) {
                             <h5 className="footerHeading" >Our company</h5>
                         </div>
                         <div className="footerText">
-                            <p><a href="#" className="footerLink">How we work</a></p>
-                            <p><a href="#" className="footerLink">Why Insure ?</a></p>
-                            <p><a href="#" className="footerLink">View Plans</a></p>
-                            <p><a href="#" className="footerLink">Reviews</a></p>
+                            <p><a className="footerLink">How we work</a></p>
+                            <p><a className="footerLink">Why Insure ?</a></p>
+                            <p><a className="footerLink">View Plans</a></p>
+                            <p><a className="footerLink">Reviews</a></p>
                         </div>
                     </Col>
                     <Col lg={3}>
@@ -36,10 +36,10 @@ function Footer(props) {
                             <h5 className="footerHeading" >Help me</h5>
                         </div>
                         <div className="footerText">
-                            <p><a href="#" className="footerLink" >FAQ</a></p>
-                            <p><a href="#" className="footerLink" >Terms of use</a></p>
-                            <p><a href="#" className="footerLink" >Privacy policy</a></p>
-                            <p><a href="#" className="footerLink" >Cookies</a></p>
+                            <p><a className="footerLink" >FAQ</a></p>
+                            <p><a className="footerLink" >Terms of use</a></p>
+                            <p><a className="footerLink" >Privacy policy</a></p>
+                            <p><a className="footerLink" >Cookies</a></p>
                         </div>
                     </Col>
                     <Col lg={3}>
@@ -47,9 +47,9 @@ function Footer(props) {
                             <h5 className="footerHeading" >Contact</h5>
                         </div>
                         <div className="footerText">
-                            <p><a href="#" className="footerLink" >Sales</a></p>
-                            <p><a href="#" className="footerLink" >Support</a></p>
-                            <p><a href="#" className="footerLink" >Live chat</a></p>
+                            <p><a className="footerLink" >Sales</a></p>
+                            <p><a className="footerLink" >Support</a></p>
+                            <p><a className="footerLink" >Live chat</a></p>
                         </div>
                     </Col>
                     <Col lg={3}>
@@ -57,9 +57,9 @@ function Footer(props) {
                             <h5 className="footerHeading" >Others</h5>
                         </div>
                         <div className="footerText">
-                            <p><a href="#" className="footerLink" >Careers</a></p>
-                            <p><a href="#" className="footerLink"> Press</a></p>
-                            <p><a href="#" className="footerLink" >Licenses</a></p>
+                            <p><a className="footerLink" >Careers</a></p>
+                            <p><a className="footerLink"> Press</a></p>
+                            <p><a className="footerLink" >Licenses</a></p>
                         </div>
                     </Col>
                 </Row>
