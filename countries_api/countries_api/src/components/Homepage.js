@@ -51,31 +51,33 @@ class Homepage extends React.Component {
             data: allData,
             selectedCountries: allData
         })
-        // console.log(allData)
+
     }
 
-    searchCountryByName = async function (inputname) {
+    searchCountryByName = function (inputname) {
+
         let inputAsArray = inputname.split("");
         let uppercased = inputAsArray[0].toUpperCase();
         inputAsArray.shift();
         inputAsArray.unshift(uppercased);
         let newString = inputAsArray.join("");
-        let allData = await this.getAllCountryData()
+        let allData = this.state.data;
         let foundCountry = allData.filter(country =>
             country.name === newString
         )
-        this.setState({ data: foundCountry })
+        console.log(foundCountry)
+        this.setState({ selectedCountries: foundCountry })
     }
 
     render() {
 
         return (
-            <div>
+            <div >
                 <Heading moonimg={this.props.moonimg} />
-                <Inputfield searchCountryByName={this.searchCountryByName} />
+                <Inputfield searchCountryByName={this.searchCountryByName} lupeimg={this.props.lupeimg} />
                 <Filtermenu countries={this.state.data} filterRegions={this.filterCountriesByRegion} />
                 <CountryDisplays countries={this.state.selectedCountries} />
-                {/* <h3>country info ul</h3> */}
+
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React from "react"
 
 
+
 class Inputfield extends React.Component {
     constructor(props) {
         super()
@@ -21,8 +22,11 @@ class Inputfield extends React.Component {
     }
     render() {
         return (
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <div><button onClick={this.submitInput}></button></div>
+            <div style={{
+                display: "flex", justifyContent: "center", paddingLeft: "20px", paddingRight: "20px", paddingTop: "25px",
+                paddingBottom: "25px"
+            }}>
+                <button style={{ backgroundImage: `url(${this.props.lupeimg})`, width: "58px" }} onClick={this.submitInput}></button>
                 <input type="text" value={this.state.input} onChange={this.changeInputState} placeholder="Search for a country" size="50"
                     style={{ height: "45px" }}></input>
 

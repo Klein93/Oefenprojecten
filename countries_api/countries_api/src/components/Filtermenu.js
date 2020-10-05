@@ -26,8 +26,8 @@ function Filtermenu(props) {
     )
 
     return (
-        <select onChange={props.filterRegions}>
-            <option value="">--select region--</option>
+        <select onChange={props.filterRegions} >
+            <option value="">Filter by Region</option>
             {filteroptions}
         </select>
     )
