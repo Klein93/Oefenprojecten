@@ -3,6 +3,8 @@ import Heading from "./Heading"
 import Inputfield from "./Inputfield"
 import CountryDisplays from "./CountryDisplays"
 import Filtermenu from "./Filtermenu"
+import moonimg from "./images/moonimage.png"
+import lupeimg from "./images/lupe.png"
 
 class Homepage extends React.Component {
     constructor(props) {
@@ -14,6 +16,7 @@ class Homepage extends React.Component {
         this.getAllCountryData = this.getAllCountryData.bind(this);
         this.searchCountryByName = this.searchCountryByName.bind(this);
         this.filterCountriesByRegion = this.filterCountriesByRegion.bind(this);
+        this.showAllCountries = this.showAllCountries.bind(this);
     }
 
     getAllCountryData = async function () {
@@ -39,6 +42,15 @@ class Homepage extends React.Component {
         })
     }
 
+    showAllCountries = async function () {
+        let allData = this.state.data;
+        this.setState({
+            data: allData,
+            selectedCountries: allData
+        })
+
+    }
+
     componentDidMount = async function () {
         let allData = await this.getAllCountryData()
         let i;
@@ -55,26 +67,31 @@ class Homepage extends React.Component {
     }
 
     searchCountryByName = function (inputname) {
+        if (inputname == "") {
+            return
 
-        let inputAsArray = inputname.split("");
-        let uppercased = inputAsArray[0].toUpperCase();
-        inputAsArray.shift();
-        inputAsArray.unshift(uppercased);
-        let newString = inputAsArray.join("");
-        let allData = this.state.data;
-        let foundCountry = allData.filter(country =>
-            country.name === newString
-        )
-        console.log(foundCountry)
-        this.setState({ selectedCountries: foundCountry })
+        } else {
+            let inputAsArray = inputname.split("");
+            let uppercased = inputAsArray[0].toUpperCase();
+            inputAsArray.shift();
+            inputAsArray.unshift(uppercased);
+            let newString = inputAsArray.join("");
+            let allData = this.state.data;
+            let foundCountry = allData.filter(country =>
+                country.name === newString
+            )
+
+            this.setState({ selectedCountries: foundCountry })
+        }
     }
 
     render() {
 
         return (
-            <div >
-                <Heading moonimg={this.props.moonimg} />
-                <Inputfield searchCountryByName={this.searchCountryByName} lupeimg={this.props.lupeimg} />
+            <div style={{ backgroundColor: "whitesmoke" }}>
+
+                <Heading moonimg={moonimg} />
+                <Inputfield searchCountryByName={this.searchCountryByName} lupeimg={lupeimg} />
                 <Filtermenu countries={this.state.data} filterRegions={this.filterCountriesByRegion} />
                 <CountryDisplays countries={this.state.selectedCountries} />
 

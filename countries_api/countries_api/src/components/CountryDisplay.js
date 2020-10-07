@@ -1,19 +1,22 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function CountryDisplay(props) {
 
     return (
-        <div style={{ display: "flex", flexDirection: "column" }}>
-            <div>
-                <img alt="" src={props.flagurl} style={{ height: "150px", width: "200px" }}></img>
+        <Link to="/singleCountry" >
+            <div style={{ backgroundColor: "white", width: "250px" }}>
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                    <img alt="" src={props.flagurl} style={{ height: "150px", width: "250px" }}></img>
+                </div>
+                <div>
+                    <h3 style={{ display: "flex", justifyContent: "center" }}>{props.countryName}</h3>
+                    <div style={{ display: "flex", justifyContent: "center" }}><div style={{ fontWeight: "bold" }}>Population:</div><div>{props.population}</div></div>
+                    <div style={{ display: "flex", justifyContent: "center" }}><div style={{ fontWeight: "bold" }}>Region:</div><div>{props.region}</div></div>
+                    <div style={{ display: "flex", justifyContent: "center" }}><div style={{ fontWeight: "bold" }}>Capital:</div><div>{props.capital}</div></div>
+                </div>
             </div>
-            <div>
-                <h3>{props.countryName}</h3>
-                <div>Population:{props.population}</div>
-                <div>Region:{props.region}</div>
-                <div>Capital:{props.capital}</div>
-            </div>
-        </div>
+        </Link>
     )
 }
 
