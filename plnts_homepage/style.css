@@ -1,0 +1,119 @@
+.heading-menu-item {
+  color: black;
+  font-weight: 700;
+  font-size: medium;
+}
+
+#plnts-menu-item {
+  color: grey;
+  font-weight: 700;
+  font-size: medium;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown-content-visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.new-released-bigimg {
+  position: relative;
+}
+
+.new-released-textblock {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.new-released-title {
+  color: black;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.new-released-price {
+  margin-top: 5px;
+  color: whitesmoke;
+  background-color: black;
+  padding: 10px;
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+.block-text {
+  margin-top: 5px;
+  color: whitesmoke;
+  background-color: black;
+  padding: 10px;
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+.block-text-white {
+  margin-top: 5px;
+  color: black;
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+}
+
+.inspiration-text-block {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+}
+
+.community-button {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.container-plnts-doctor {
+  background-color: #99FF99;
+}
+
+.emma-help {
+  background-color: #FFCC00;
+}
+
+.warehouse-paragraph {
+  background-color: #ffff4d;
+  margin-left: 300px;
+  margin-top: -48px;
+  opacity: 80%;
+  width: 300px;
+}
+
+.warehouse-paragraph-text {
+  color: #F8F8FF;
+  font-weight: 800;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.warehouse-paragraph-title {
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: x-large;
+}
+
+.shop-btn {
+  padding-bottom: 20px;
+}
+
+.paragraph-title {
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */
